@@ -6,10 +6,11 @@ const createToken = (_id) =>{
 } 
 
 const login = async (req, res) =>{
+    // show what's wrong with this code
+    console.log(req)
     const {email, password} = req.body
-    debugger
 
-    console.log({email, password})
+    
     try {
         const user = await User.login(email, password)
 
@@ -24,7 +25,7 @@ const login = async (req, res) =>{
 }
 
 const signup = async  (req, res) =>{
-
+    console.log(req)
     const {email, password} = req.body
     console.log(email, password)
     
